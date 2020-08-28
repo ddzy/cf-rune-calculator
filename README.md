@@ -3,3 +3,21 @@
 ------
 
 CF 无尽挑战符文计算器网页版, 支持直接在 iOS、Android、PC 上的浏览器访问.
+
+## 用法
+
+------
+
+1. 打开站点: https://project.yyge.top/tool/cf-rune-calculator/
+
+![第一步](./src/images/step_1.PNG)
+
+2. 添加至主屏幕
+
+![第二步](./src/images/step_2.PNG)
+
+3. 找到快捷方式并打开
+
+![第三步](./src/images/step_3.PNG)
+
+**PS: 安卓用户同上**
