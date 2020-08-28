@@ -1,0 +1,17 @@
+html,
+body {
+  height: 100%;
+}
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+#container .calculator__process__link {
+  text-decoration: none;
+}
+#container .calculator__process__link:link,
+#container .calculator__process__link:visited {
+  color: #666;
+}

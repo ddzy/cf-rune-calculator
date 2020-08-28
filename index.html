@@ -3,19 +3,75 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="keywords" content="CF, 穿越火线, 符文, 计算器">
   <meta name="description" content="CF穿越火线无尽挑战符文计算器网页版, 简单易用">
   <title>CF无尽挑战符文计算器(网页版)</title>
-  <link href="https://cdn.bootcdn.net/ajax/libs/minireset.css/0.0.2/minireset.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="./less/index.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css" />
+  <link rel="stylesheet" href="./src/less/index.css">
 </head>
 
 <body>
-  <h1>符文计算器</h1>
+  <div id="container">
+    <div class="calculator">
+      <!-- 填写信息表单 -->
+      <form class="pure-form pure-form-stacked calculator__process">
+        <fieldset>
+          <legend>
+            <a class="calculator__process__link" href="https://yyge.top" target="_blank">🏠 我的主页</a>
+          </legend>
+
+          <div class="pure-control-group">
+            <label for="arms">武伤: </label>
+            <input id="arms" type="text" placeholder="">
+          </div>
+
+          <div class="pure-control-group">
+            <label for="rate"">爆率: </label>
+            <input id=" rate" type="text" placeholder="">
+          </div>
+
+          <div class="pure-control-group">
+            <label for="crit">爆伤: </label>
+            <input id="crit" type="text" placeholder="">
+          </div>
+
+          <div class="pure-controls">
+            <button type="button" class="pure-button pure-button-primary pure-input-1">开始计算</button>
+          </div>
+        </fieldset>
+      </form>
+      <!-- 计算结果表格 -->
+      <table class="pure-table calculator__result">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>武伤</th>
+            <th>爆率</th>
+            <th>爆伤</th>
+            <th>dps</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr class="pure-table-odd">
+            <td>0</td>
+            <td>60</td>
+            <td>37</td>
+            <td>560</td>
+            <td>6.144</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
 </body>
-<script src="https://cdn.bootcdn.net/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
-<script src="./js/index.js"></script>
+<script src="./src/js/index.js"></script>
 
 </html>
