@@ -45,13 +45,13 @@
   };
 
   oArmsInput.addEventListener('input', (e) => {
-    data.arms = Number.parseInt(e.target.value) / 100;
+    data.arms = Number.parseFloat(e.target.value) / 100;
   });
   oRateInput.addEventListener('input', (e) => {
-    data.rate = Number.parseInt(e.target.value) / 100;
+    data.rate = Number.parseFloat(e.target.value) / 100;
   });
   oCritInput.addEventListener('input', (e) => {
-    data.crit = Number.parseInt(e.target.value) / 100;
+    data.crit = Number.parseFloat(e.target.value) / 100;
   });
 
   oSubmitBtn.addEventListener('click', () => {
