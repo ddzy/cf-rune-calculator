@@ -11,6 +11,9 @@ body {
 #container .calculator__process__link {
   text-decoration: none;
 }
+#container .calculator__process__link:hover {
+  text-decoration: underline;
+}
 #container .calculator__process__link:link,
 #container .calculator__process__link:visited {
   color: #666;
