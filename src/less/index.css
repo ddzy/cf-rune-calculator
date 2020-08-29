@@ -28,3 +28,17 @@ body {
 #container .calculator__process__link:visited {
   color: #666;
 }
+#container .copyright {
+  margin-top: 50px;
+  text-align: center;
+}
+#container .copyright a {
+  text-decoration: none;
+}
+#container .copyright a:hover {
+  text-decoration: underline;
+}
+#container .copyright a:link,
+#container .copyright a:visited {
+  color: #666;
+}
