@@ -14,6 +14,7 @@
     integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css" />
   <link rel="stylesheet" href="./src/less/index.css">
+  <script src="./src/js/baiduCount.js"></script>
 </head>
 
 <body>
@@ -23,26 +24,41 @@
       <form class="pure-form pure-form-stacked calculator__process">
         <fieldset>
           <legend>
-            <a class="calculator__process__link" href="https://github.com/ddzy/cf-rune-calculator" target="_blank">👌
+            <a class="calculator__process__link" href="https://github.com/ddzy/cf-rune-calculator" target="_blank">🏠
               添加至桌面快捷方式?</a>
           </legend>
 
-          <div class="pure-control-group">
-            <label for="arms">武伤: </label>
-            <input id="arms" type="text" placeholder="">
+          <div class="pure-g">
+            <div class="pure-u-1-2 pure-u-md-1-2">
+              <label for="arms">武伤: </label>
+              <input id="arms" type="text" placeholder="">
+            </div>
+            <div class="pure-u-1-2 pure-u-md-1-2">
+              <label for="rate">爆率: </label>
+              <input id="rate" type="text" placeholder="">
+            </div>
           </div>
-
-          <div class="pure-control-group">
-            <label for="rate"">爆率: </label>
-            <input id="rate" type="text" placeholder="">
+          <div class="pure-g">
+            <div class="pure-u-1-2 pure-u-md-1-2">
+              <label for="crit">爆伤: </label>
+              <input id="crit" type="text" placeholder="">
+            </div>
+            <div class="pure-u-1-2 pure-u-md-1-2">
+              <label for="main">主武器: </label>
+              <input id="main" type="text" placeholder="0-200">
+            </div>
           </div>
-
-          <div class="pure-control-group">
-            <label for="crit">爆伤: </label>
-            <input id="crit" type="text" placeholder="">
+          <div class="pure-g">
+            <div class="pure-u-1-2 pure-u-md-1-2">
+              <label for="black">黑骑士: </label>
+              <input id="black" type="text" placeholder="0-6">
+            </div>
+            <div class="pure-u-1-2 pure-u-md-1-2">
+              <label for="doll">玩偶: </label>
+              <input id="doll" type="text" placeholder="0-6">
+            </div>
           </div>
-
-          <div class="pure-controls">
+          <div class="pure-controls  pure-u-1 pure-u-md-1">
             <button type="button" class="pure-button pure-button-primary pure-input-1 calculator__process__submit"">开始计算</button>
           </div>
         </fieldset>
@@ -55,6 +71,9 @@
                   <th>武伤</th>
                   <th>爆率</th>
                   <th>爆伤</th>
+                  <th>主武器</th>
+                  <th>黑骑士</th>
+                  <th>玩偶</th>
                   <th>dps</th>
                 </tr>
               </thead>
@@ -65,7 +84,10 @@
                   <td>60</td>
                   <td>37</td>
                   <td>560</td>
-                  <td>6.144</td>
+                  <td>200</td>
+                  <td>6</td>
+                  <td>6</td>
+                  <td>26.433</td>
                 </tr>
               </tbody>
               </table>
