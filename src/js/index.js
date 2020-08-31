@@ -16,7 +16,8 @@
     main: '', // 主武器
     black: '', // 黑骑士
     doll: '', // 玩偶
-    result: 0,
+    result: 0, // 总dps
+    legencyResult: 0, // 纯红色dps(同第一版)
   };
   const resultList = [
     {
@@ -26,6 +27,7 @@
       main: 2,
       black: 6,
       doll: 6,
+      legencyResult: 6.144,
       result: 26.433,
     },
   ];
@@ -37,7 +39,7 @@
       return Object.is(v, NaN);
     },
     /**
-     * 计算理论 dps
+     * 计算纯红色 dps
      * @param {Number} arms 武伤
      * @param {Number} rate 爆率
      * @param {Number} crit 爆伤
@@ -51,7 +53,7 @@
       return rightMultiplier * leftMultiplier;
     },
     /**
-     * 计算理论 dps
+     * 计算总 dps
      * @param {Number} totalArms 总的武器伤害倍数
      * @param {Number} totalRate 总的爆率倍数
      * @param {Number} totalCrit 总的爆伤倍数
@@ -160,6 +162,7 @@
     const totalBlack = tools.calcBlack(data.black);
 
     data.result = +(tools._calc(totalArms, totalRate, totalCrit, totalBlack)).toFixed(3);
+    data.legencyResult = +(tools.calc(data.arms, data.rate, data.crit).toFixed(3));
     resultList.push({
       arms: data.arms,
       rate: data.rate,
@@ -168,6 +171,7 @@
       black: data.black,
       doll: data.doll,
       result: data.result,
+      legencyResult: data.legencyResult,
     });
 
     render();
@@ -183,6 +187,7 @@
         <td>${v.main}</td>
         <td>${v.black}</td>
         <td>${v.doll}</td>
+        <td>${v.legencyResult}</td>
         <td>${v.result}</td>
       </tr>
     `;
@@ -198,6 +203,7 @@
       main: data.main * 100,
       black: data.black,
       doll: data.doll,
+      legencyResult: data.legencyResult,
       result: data.result,
       index: resultList.length - 1,
     });

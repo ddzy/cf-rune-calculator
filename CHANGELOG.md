@@ -18,3 +18,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 - 完成第二版计算器
 - 完善算法, 加入其他因素(黑骑士数目、玩偶数目、紫色符文的数值)
+
+## [2020-8-31]
+
+### Added
+
+- 新增功能, 可以显示纯红色符文的 dps
