@@ -32,3 +32,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Added
 
 - 新增加入 QQ 群快捷按钮
+
+### Marked
+
+- 用户已超 10000+([链接](./src/images/mark-1.png))
