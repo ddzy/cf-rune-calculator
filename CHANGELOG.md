@@ -24,3 +24,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Added
 
 - 新增功能, 可以显示纯红色符文的 dps
+
+## [2020-10-31]
+
+------
+
+### Added
+
+- 新增加入 QQ 群快捷按钮
