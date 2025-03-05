@@ -2,6 +2,16 @@
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
+## [2025-3-5]
+
+### Added
+
+- 集成`live-server`、`pnpm`等构建工具
+
+### Changed
+
+- 更换访问链接
+
 ## [2020-8-28]
 
 ------
