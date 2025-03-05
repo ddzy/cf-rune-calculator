@@ -2,7 +2,7 @@
 
 ---
 
-https://yyge.top/cf-rune-calculator/
+[https://yyge.top/cf-rune-calculator/](https://yyge.top/cf-rune-calculator/)
 
 CF 无尽挑战符文计算器网页版:
 
@@ -16,7 +16,7 @@ CF 无尽挑战符文计算器网页版:
 
 ---
 
-1. 打开站点: https://yyge.top/cf-rune-calculator/
+1. 打开站点: [https://yyge.top/cf-rune-calculator/](https://yyge.top/cf-rune-calculator/)
 
 ![第一步](./src/images/step_1.PNG)
 
