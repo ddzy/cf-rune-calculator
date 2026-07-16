@@ -3,12 +3,12 @@ import vue from '@vitejs/plugin-vue';
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
-	base: '/cf-rune-calculator/',
 	plugins: [
 		vue(),
 		VitePWA({
 			registerType: 'autoUpdate',
 			manifest: {
+				id: '/',
 				name: 'CF 无尽挑战符文计算器',
 				short_name: 'CF 符文计算器',
 				description: 'CF 穿越火线无尽挑战符文计算器，支持 PC 和移动端。',
@@ -16,6 +16,8 @@ export default defineConfig({
 				background_color: '#102a43',
 				display: 'standalone',
 				lang: 'zh-CN',
+				start_url: '/',
+				scope: '/',
 				icons: [
 					{
 						src: 'icons/rune-calculator-192.png',
