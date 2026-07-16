@@ -1,31 +1,31 @@
-# cf-rune-calculator
+# CF 无尽挑战符文计算器
 
----
+CF 无尽挑战符文计算器网页版，支持 PC 和移动端，用于比较不同符文配置下的 DPS。
 
-[https://yyge.top/cf-rune-calculator/](https://yyge.top/cf-rune-calculator/)
+在线使用：[https://yyge.top/cf-rune-calculator/](https://yyge.top/cf-rune-calculator/)
 
-CF 无尽挑战符文计算器网页版:
+## 开发
 
-1. 支持黑骑士、玩偶等其他因素的计算
-2. 支持直接在 iOS、Android、PC 上的浏览器访问.
-3. 总访客已超 `10000+`([链接](src/images/mark-1.png))
+项目使用 Vite、Vue 3、TypeScript 和 SCSS 构建，计算数据只保存在当前设备的浏览器本地存储中，不需要后端服务。
 
-![计算器主界面](./src/images/interface.png)
+```bash
+pnpm install
+pnpm dev
+```
 
-## 用法
+## 构建
 
----
+```bash
+pnpm type-check
+pnpm build
+pnpm preview
+```
 
-1. 打开站点: [https://yyge.top/cf-rune-calculator/](https://yyge.top/cf-rune-calculator/)
+部署到 `/cf-rune-calculator/` 子路径时，Vite 已通过 `base` 配置处理静态资源路径。
 
-![第一步](./src/images/step_1.PNG)
+## 计算说明
 
-2. 添加至主屏幕
-
-![第二步](./src/images/step_2.PNG)
-
-3. 找到快捷方式并打开
-
-![第三步](./src/images/step_3.PNG)
-
-**PS: 安卓用户同上**
+- 武伤、爆率、爆伤、紫色主武器按百分数输入，例如 `60` 表示 `60%`。
+- 黑骑士和玩偶按数量输入，当前支持 `0-6` 个。
+- “红色 DPS”保留旧版本的纯红色符文计算结果。
+- “总 DPS”会综合紫色主武器、黑骑士和玩偶因素。

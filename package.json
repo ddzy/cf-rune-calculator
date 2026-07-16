@@ -1,17 +1,28 @@
 {
   "name": "cf-rune-calculator",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "2.0.0",
+  "private": true,
+  "description": "CF 无尽挑战符文计算器",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "preinstall": "npx only-allow pnpm",
-    "serve": "live-server --port=3003 --quiet"
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "type-check": "vue-tsc --noEmit"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "packageManager": "pnpm@11.7.0",
+  "engines": {
+    "node": ">=24.18.0",
+    "pnpm": ">=10.0.0"
+  },
+  "dependencies": {
+    "vue": "^3.5.39"
+  },
   "devDependencies": {
-    "live-server": "^1.2.2"
+    "@vitejs/plugin-vue": "^6.0.8",
+    "sass": "^1.101.0",
+    "typescript": "^5.9.3",
+    "vite": "^8.1.4",
+    "vue-tsc": "^3.3.7"
   }
 }

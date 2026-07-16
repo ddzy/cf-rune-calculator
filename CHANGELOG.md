@@ -1,5 +1,14 @@
 # Change Log
 
+## [2026-07-16]
+
+### Changed
+
+- 使用 Vite + Vue 3 + TypeScript + SCSS 重构项目
+- 拆分计算逻辑、配置、表单和结果展示
+- 增加响应式 PC / 移动端布局、参数校验、重置和历史记录
+- 使用浏览器本地存储保留当前设备的计算记录
+
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ## [2025-3-5]

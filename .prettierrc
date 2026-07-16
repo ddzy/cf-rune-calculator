@@ -1,0 +1,12 @@
+{
+	"eslintIntegration": true,
+	"semi": true,
+	"endOfLine": "auto",
+	"tabWidth": 2,
+	"useTabs": true,
+	"arrowParens": "always",
+	"bracketSameLine": false,
+	"singleQuote": true,
+	"htmlWhitespaceSensitivity": "css",
+	"trailingComma": "all"
+}
