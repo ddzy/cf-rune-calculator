@@ -6,11 +6,26 @@ import { fieldConfig } from '../data/runeConfig'
 
 const initialForm = (): CalculatorForm => ({ arms: null, rate: null, crit: null, main: null, black: null, doll: null })
 
+const exampleResult: CalculationResult = {
+  id: 'legacy-example',
+  index: 0,
+  arms: 60,
+  rate: 37,
+  crit: 560,
+  main: 200,
+  black: 6,
+  doll: 6,
+  legacyResult: 6.144,
+  totalResult: 26.433,
+  createdAt: '2020-08-31T00:00:00.000Z',
+}
+
 export function useRuneCalculator() {
   const form = reactive<CalculatorForm>(initialForm())
-  const history = ref<CalculationResult[]>(loadHistory())
+  const history = ref<CalculationResult[]>((loadHistory() ?? []).filter((item) => item.id !== exampleResult.id))
   const errorMessage = ref('')
-  const latest = computed(() => history.value[0] ?? null)
+  const results = computed(() => [exampleResult, ...history.value])
+  const latest = computed(() => history.value[0] ?? exampleResult)
 
   watch(history, (value) => saveHistory(value), { deep: true })
 
@@ -22,10 +37,12 @@ export function useRuneCalculator() {
     }
     const outOfRange = fieldConfig.find((field) => {
       const value = form[field.key]
-      return value !== null && (value < field.min || value > field.max)
+      return value !== null && (value < field.min || (field.max !== undefined && value > field.max))
     })
     if (outOfRange) {
-      errorMessage.value = `${outOfRange.label}请输入 ${outOfRange.min}-${outOfRange.max} 范围内的数值。`
+      errorMessage.value = outOfRange.max === undefined
+        ? `${outOfRange.label}请输入不小于 ${outOfRange.min} 的数值。`
+        : `${outOfRange.label}请输入 ${outOfRange.min}-${outOfRange.max} 范围内的数值。`
       return
     }
 
@@ -53,5 +70,5 @@ export function useRuneCalculator() {
     history.value = []
   }
 
-  return { form, history, latest, errorMessage, calculateCurrent, resetForm, removeResult, clearHistory }
+  return { form, results, latest, errorMessage, calculateCurrent, resetForm, removeResult, clearHistory }
 }

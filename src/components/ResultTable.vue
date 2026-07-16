@@ -13,7 +13,7 @@ const columns = [
   <section class="history-panel panel" aria-labelledby="history-title">
     <div class="section-heading">
       <div><p class="eyebrow">Calculation history</p><h2 id="history-title">计算记录</h2></div>
-      <div class="heading-actions"><span class="result-count">{{ results.length }} 条</span><button v-if="results.length" class="text-button" type="button" @click="emit('clear')">清空</button></div>
+      <div class="heading-actions"><span class="result-count">{{ results.length }} 条</span><button v-if="results.length > 1" class="text-button" type="button" @click="emit('clear')">清空</button></div>
     </div>
     <div v-if="results.length" class="table-scroll">
       <table>
@@ -23,7 +23,7 @@ const columns = [
             <td>{{ results.length - index }}</td>
             <td v-for="[key] in columns" :key="key">{{ result[key] }}</td>
             <td>{{ result.legacyResult }}</td><td class="total-cell">{{ result.totalResult }}</td>
-            <td><button class="icon-button" type="button" aria-label="删除这条记录" @click="emit('remove', result.id)">×</button></td>
+            <td><button v-if="result.id !== 'legacy-example'" class="icon-button" type="button" aria-label="删除这条记录" @click="emit('remove', result.id)">×</button><span v-else class="example-label">示例</span></td>
           </tr>
         </tbody>
       </table>

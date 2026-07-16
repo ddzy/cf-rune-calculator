@@ -2,12 +2,12 @@ import type { CalculationResult } from '../types/calculator'
 
 const storageKey = 'cf-rune-calculator:history'
 
-export function loadHistory(): CalculationResult[] {
+export function loadHistory(): CalculationResult[] | null {
   try {
     const value = localStorage.getItem(storageKey)
-    return value ? JSON.parse(value) : []
+    return value ? JSON.parse(value) : null
   } catch {
-    return []
+    return null
   }
 }
 

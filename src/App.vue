@@ -4,7 +4,7 @@ import ResultSummary from './components/ResultSummary.vue'
 import ResultTable from './components/ResultTable.vue'
 import { useRuneCalculator } from './composables/useRuneCalculator'
 
-const { form, history, latest, errorMessage, calculateCurrent, resetForm, removeResult, clearHistory } = useRuneCalculator()
+const { form, results, latest, errorMessage, calculateCurrent, resetForm, removeResult, clearHistory } = useRuneCalculator()
 </script>
 
 <template>
@@ -23,7 +23,7 @@ const { form, history, latest, errorMessage, calculateCurrent, resetForm, remove
       <ResultSummary :result="latest" />
     </div>
 
-    <ResultTable :results="history" @remove="removeResult" @clear="clearHistory" />
+    <ResultTable :results="results" @remove="removeResult" @clear="clearHistory" />
     <footer><span>数据只保存在当前设备</span><a href="https://github.com/ddzy/cf-rune-calculator" target="_blank" rel="noopener noreferrer">查看项目源码 ↗</a></footer>
   </main>
 </template>

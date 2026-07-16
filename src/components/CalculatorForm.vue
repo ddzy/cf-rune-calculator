@@ -31,7 +31,7 @@ function update(key: keyof CalculatorForm, value: string) {
             :max="field.max"
             :step="field.step"
             inputmode="decimal"
-            :placeholder="`${field.min} - ${field.max}`"
+            :placeholder="field.max === undefined ? `${field.min} 以上` : `${field.min} - ${field.max}`"
             @input="update(field.key, ($event.target as HTMLInputElement).value)"
           />
           <span>{{ field.suffix }}</span>
