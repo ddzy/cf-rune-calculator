@@ -9,13 +9,13 @@ const { form, results, latest, errorMessage, calculateCurrent, resetForm, remove
 
 <template>
   <main class="page-shell">
-    <header class="hero">
-      <div>
+    <header class="tool-header">
+      <div class="tool-title">
         <p class="eyebrow">CF · Endless Challenge</p>
-        <h1>无尽挑战<br /><em>符文计算器</em></h1>
-        <p class="hero-copy">快速比较不同符文配置下的 DPS，找到更适合你的搭配。</p>
+        <h1>无尽挑战符文计算器</h1>
+        <p>快速比较不同符文配置下的 DPS。</p>
       </div>
-      <div class="hero-meta"><span>PC / Mobile</span><span>纯静态运行</span></div>
+      <div class="tool-meta"><span>PC / 移动端</span><span>支持离线使用</span></div>
     </header>
 
     <div class="main-grid">
