@@ -2,7 +2,7 @@
 
 CF 无尽挑战符文计算器网页版，支持 PC 和移动端，用于比较不同符文配置下的 DPS。
 
-在线使用：[https://yyge.top/cf-rune-calculator/](https://yyge.top/cf-rune-calculator/)
+在线使用：[https://cf-rune.yyge.top](https://cf-rune.yyge.top)
 
 ## 开发
 
@@ -20,8 +20,6 @@ pnpm type-check
 pnpm build
 pnpm preview
 ```
-
-部署到 `/cf-rune-calculator/` 子路径时，Vite 已通过 `base` 配置处理静态资源路径。
 
 ## 计算说明
 
