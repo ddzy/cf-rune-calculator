@@ -18,8 +18,9 @@
 
 * { box-sizing: border-box; }
 
+html, body, #app { max-width: 100%; overflow-x: clip; }
+
 body {
-  min-width: 320px;
   min-height: 100vh;
   margin: 0;
   background: radial-gradient(circle at 100% 0%, #dcecea 0, transparent 34rem), #eff3f4;
@@ -32,6 +33,7 @@ h1, h2, p { margin-top: 0; }
 
 .page-shell {
   width: min(1180px, calc(100% - 40px));
+  min-width: 0;
   margin: 24px auto 48px;
 }
 
@@ -214,7 +216,7 @@ input {
 .summary-values div:first-child span, .summary-values div:first-child strong { color: #eff8f7; }
 .summary-note, .summary-placeholder { margin: 22px 0 0; color: var(--color-muted); font-size: 0.78rem; line-height: 1.6; }
 
-.history-panel { margin-top: 20px; }
+.history-panel { min-width: 0; margin-top: 20px; overflow: hidden; }
 
 .result-count {
   padding: 5px 9px;
@@ -224,7 +226,14 @@ input {
   font: 0.7rem 'DM Mono', monospace;
 }
 
-.table-scroll { overflow-x: auto; }
+.table-scroll {
+  contain: paint;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
 table { width: 100%; min-width: 760px; border-collapse: collapse; font-size: 0.82rem; }
 th { color: var(--color-muted); font-size: 0.72rem; font-weight: 500; text-align: left; }
 th, td { padding: 13px 10px; border-bottom: 1px solid #e3ecea; white-space: nowrap; }
@@ -274,7 +283,7 @@ footer a:hover { color: var(--color-link-hover); text-decoration: underline; }
   border: 0;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 720px), (hover: none) and (pointer: coarse) {
   .page-shell { width: min(100% - 24px, 560px); margin: 12px auto 36px; }
   .tool-header { align-items: flex-start; flex-direction: column; gap: 15px; padding: 21px; border-radius: 14px; }
   .tool-meta { flex-wrap: wrap; }
